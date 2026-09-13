@@ -1,10 +1,17 @@
 import '../css/Login.css'
 import { useState } from 'react'
 function LogIn() {
+    //user/password states
     const [password, setPassword] = useState('')
     const [user, setUser] = useState('')
+    //onSubmit function
     const handleSubmit = (e) =>{
         e.preventDefault()
+        //login validation
+        if(!user.trim() || !password.trim()){
+            alert("user or password is empty")
+            return;
+        }
         console.log(user, password)
     }
     return (
