@@ -1,14 +1,18 @@
 .login{
+    /* font-family: HarryPotter; */
     width: 100%;
     max-width: 430px;
-    background-color: aqua;
+    background-color: rgb(203, 209, 146);
     padding: 100px 20px;
     height: 100vh;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
+    justify-content: center;
+    
 }
 
 .login-title{
     text-align: center;
+    /* font-family: HarryPotter; */
 }
 
 .login-form, .login-input, .login{
@@ -20,15 +24,21 @@
 
 .login-input input{
     width: 200px;
+    border-radius: 5px;
+    border-color: blanchedalmond;
 }
 
 .login-submit{
+    /* font-family: HarryPotter; */
     width: 100px;
+    border-radius: 8px;
+    background-color:aqua;
+    box-shadow: 3px 3px rgb(14, 85, 109);
 }
 
 .login-links{
     width: 200px;
-    font-size: 10px;
+    font-size: 12px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

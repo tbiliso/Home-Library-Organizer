@@ -1,3 +1,8 @@
+@font-face {
+  font-family: HarryPotter;
+  src: url(src/assets/fonts/HarryPotter-ov4z.woff2);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +11,7 @@
 
 body {
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
