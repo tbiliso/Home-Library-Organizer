@@ -3,3 +3,8 @@
   margin-top: 5px;
 }
 
+.mainWrapper{
+  font-family: font;
+  background-color: rgb(203, 209, 146);
+  max-width: 100%;
+}
