@@ -2,6 +2,7 @@ import { useState } from 'react';
 import LogIn from './pages/Login.jsx'
 import Register from './pages/Register.jsx';
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
 
   const [font, setFont] = useState('HarryPotter')
