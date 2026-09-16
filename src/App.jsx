@@ -2,7 +2,8 @@ import { useState } from 'react';
 import LogIn from './pages/Login.jsx'
 import Register from './pages/Register.jsx';
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+
 function App() {
 
   const [font, setFont] = useState('HarryPotter')
@@ -15,6 +16,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<LogIn />} />
           <Route path="/register" element={<Register />} />
+          {/* მთავარი გვერდი გადაამისამართოს login-ზე */}
+          <Route path="/" element={<Navigate to="/login" />} />
         </Routes>
       </BrowserRouter>
       

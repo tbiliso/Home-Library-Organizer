@@ -1,6 +1,6 @@
 import '../css/Login.css'
 import { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 function LogIn() {
     //user/password states
     const [password, setPassword] = useState('')
@@ -26,8 +26,10 @@ function LogIn() {
                 <button type="submit" className="login-submit">Log In</button>
             </form>
             <div className="login-links">
-                <a href="/register">SignUp</a>
-                <a href="/password-recovery">Forgot Password?</a>
+                <Link to="/register">SignUp</Link>
+                {/* <a href="/register">SignUp</a> */}
+                <Link to="/password-recovery">Forgot Password?</Link>
+                {/* <a href="/password-recovery">Forgot Password?</a> */}
             </div>
         </div>
     )

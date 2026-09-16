@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import '../css/register.css'
 function Register() {
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
@@ -14,7 +14,7 @@ function Register() {
         console.log(fname, lname, email, password, rptPass)
     }
     return (
-        <form onSubmit={subForm}>
+        <form onSubmit={subForm} className="regForm">
             <input type="text" 
                     value={fname}
                     placeholder="First name" 
