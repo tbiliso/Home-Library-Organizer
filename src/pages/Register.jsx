@@ -34,11 +34,15 @@ function Register() {
         }
         if (!email.trim()) {
             newErrors.email = ('გთხოვთ შეიყვანოთ ელ-ფოსტა');
+        } else if(!/@/.test(email) || !/\./.test(email)){
+            newErrors.email = 'ელ-ფოსტის ფორმატი არასწორია'
         }
-        if (!password.trim()) {
+            
+        
+        if (!password) {
             newErrors.password = ('გთხოვთ შეიყვანოთ პაროლი');
         }
-        if (!rptPass.trim()) {
+        if (!rptPass) {
             newErrors.rptPass = ('გთხოვთ გაიმეოროთ პაროლი')
         } else if (password !== rptPass) {
             newErrors.rptPass = 'პაროლები არ ემთხვევა';
