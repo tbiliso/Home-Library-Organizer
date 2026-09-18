@@ -1,12 +1,14 @@
 import { useState } from "react";
 import '../css/register.css'
+import { useNavigate } from "react-router-dom";
 function Register() {
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [rptPass, setRptPass] = useState('')
-    const [errors, seterrors] = useState({
+    const navigate = useNavigate()
+    const [errors, setErrors] = useState({
         fname: '',
         lname: '',
         email: '',
@@ -41,7 +43,7 @@ function Register() {
         } else if (password !== rptPass) {
             newErrors.rptPass = 'პაროლები არ ემთხვევა';
         }
-        seterrors(newErrors);
+        setErrors(newErrors);
         if (
             newErrors.fname ||
             newErrors.lname ||
@@ -52,22 +54,24 @@ function Register() {
             return
         }
         console.log(fname, lname, email, password, rptPass);
+        navigate('/login')
     }
+    
     return (
         <form onSubmit={subForm} className="regForm">
             <input type="text"
                 value={fname}
                 placeholder="First name"
                 onChange={(e) => setFname(e.target.value)} />
-            <p className="errorMsg">{errors.fname}</p>
+            {errors.fname && <p className="errorMsg">{errors.fname}</p>}
             <input type="text" value={lname} placeholder="Last name" onChange={(e) => setLname(e.target.value)} />
-            <p className="errorMsg">{errors.lname}</p>
+            {errors.lname && <p className="errorMsg">{errors.lname}</p>}
             <input type="email" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-            <p className="errorMsg">{errors.email}</p>
+            {errors.email && <p className="errorMsg">{errors.email}</p>}
             <input type="password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-            <p className="errorMsg">{errors.password}</p>
+            {errors.password && <p className="errorMsg">{errors.password}</p>}
             <input type="password" value={rptPass} placeholder="Repeat password" onChange={(e) => setRptPass(e.target.value)} />
-            <p className="errorMsg">{errors.rptPass}</p>
+            {errors.rptPass && <p className="errorMsg">{errors.rptPass}</p>}
             <button type="submit">Register</button>
         </form>
     )
