@@ -1,22 +1,35 @@
 # Home Library Organizer
 
-A React application for organizing and managing a home library.
+Home Library Organizer is a mobile app for people who want to organize their home library. It helps users keep track of which books they own, how many books they have, where the books are located, which books they have already read, and which books they want to read.
 
 ## Features
 
-- User login
-- Book organization
-- Reading status
-- Book location tracking
+- Login page
+- Register page
+- Form validation
+- Email validation
+- React Router navigation
 - Font switcher
 
-## Technologies
+## Tech Stack
 
 - React
 - JavaScript
 - CSS
 - Vite
+- React Router
 
 ## Project Status
 
-This project is currently under development.
+The project is currently under development.
+
+## Planned Features
+
+- Add books
+- Edit books
+- Delete books
+- Reading status
+- Book condition
+- Book location tracking
+- LocalStorage support
+- Backend and database

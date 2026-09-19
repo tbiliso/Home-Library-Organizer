@@ -24,7 +24,7 @@ function Register() {
             email: '',
             password: '',
             rptPass: ''
-        }
+        }//form validation
         if (!fname.trim()) {
             newErrors.fname = ('გთხოვთ შეიყვანოთ სახელი');
         }
@@ -34,7 +34,7 @@ function Register() {
         }
         if (!email.trim()) {
             newErrors.email = ('გთხოვთ შეიყვანოთ ელ-ფოსტა');
-        } else if(!/@/.test(email) || !/\./.test(email)){
+        } else if(!/@/.test(email) || !/\./.test(email)){ //regular expression (regex) from checking email
             newErrors.email = 'ელ-ფოსტის ფორმატი არასწორია'
         }
             
